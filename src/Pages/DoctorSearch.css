@@ -1,0 +1,265 @@
+/* Main Container */
+.doctor-search-container {
+ font-family: 'Roboto', sans-serif;
+ color: #333;
+ background-color: white;
+ width: 99vw;
+ max-width: none;
+ margin: 0;
+ padding: 0 0px; /* optional */
+}
+
+/* Search Header */
+.search-header {
+ background-color: #1e6ab3;
+ padding: 15px 0;
+ width: screen;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+}
+
+.search-form {
+ max-width: 1100px;
+ margin: 0 auto;
+ display: flex;
+ justify-content: center;
+}
+
+.search-input-container {
+ position: relative;
+ display: flex;
+ justify-content: space-between;
+ width: 80%;
+ gap: 10px;
+}
+
+.search-input {
+ width: 100%;
+ padding: 12px 45px 12px 15px;
+ border: none;
+ border-radius: 4px;
+ font-size: 16px;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ background-color: #f5f5f5;
+}
+
+.search-button {
+ position: relative;
+ right: 0px;
+ top: 50%;
+ transform: translateY(-50%);
+ background: none;
+ border: none;
+ cursor: pointer;
+ font-size: 20px;
+ background-color:#444;
+ height: 100%;
+}
+
+.suggestions-dropdown {
+ position: absolute;
+ top: 100%;
+ left: 0;
+ width: 100%;
+ background-color: white;
+ border-radius: 0 0 4px 4px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ z-index: 10;
+}
+
+.suggestion-item {
+ padding: 10px 15px;
+ cursor: pointer;
+ border-bottom: 1px solid #eee;
+}
+
+.suggestion-item:hover {
+ background-color: #f5f5f5;
+}
+
+/* Main Content */
+.main-content {
+ display: flex;
+ margin-top: 20px;
+ padding: 0 20px;
+}
+
+/* Filters Panel */
+.filters-panel {
+ width: 280px;
+ margin-right: 20px;
+}
+
+.filters-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 15px;
+}
+
+.clear-all-btn {
+ color: #1e6ab3;
+ background: none;
+ border: none;
+ cursor: pointer;
+ font-weight: 500;
+}
+
+.filter-section {
+ background-color:#ddd;
+ border-radius: 8px;
+ margin-bottom: 15px;
+ padding: 15px;
+ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filter-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 15px;
+}
+
+.filter-header h3 {
+ margin: 0;
+ font-size: 16px;
+ font-weight: 500;
+}
+
+.chevron {
+ cursor: pointer;
+ font-size: 16px;
+}
+
+.filter-search {
+ margin-bottom: 15px;
+}
+
+.speciality-search {
+ width: 80%;
+ padding: 8px 12px;
+ border: 1px solid #ddd;
+ border-radius: 4px;
+ font-size: 14px;
+}
+
+.filter-options {
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+}
+
+.radio-option, .checkbox-option {
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ cursor: pointer;
+ font-size: 14px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+ cursor: pointer;
+}
+
+/* Doctor List */
+.doctor-list {
+ flex: 1;
+}
+
+.doctor-card {
+ background-color: #f9f9f9;
+ border-radius: 8px;
+ padding: 20px;
+ margin-bottom: 15px;
+ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+ display: flex;
+ justify-content: space-between;
+}
+
+.doctor-info {
+ display: flex;
+ gap: 15px;
+ flex: 3;
+}
+
+.doctor-avatar img {
+ width: 80px;
+ height: 80px;
+ border-radius: 50%;
+ object-fit: cover;
+ border: 1px solid #eee;
+}
+
+.doctor-details {
+ display: flex;
+ flex-direction: column;
+ gap: 5px;
+ flex: 1;
+}
+
+.doctor-name {
+ margin: 0;
+ font-size: 18px;
+ color: #1e6ab3;
+ font-weight: 500;
+}
+
+.doctor-speciality {
+ margin: 0;
+ font-weight: 500;
+ color: #444;
+}
+
+.doctor-qualifications, .doctor-experience {
+ margin: 0;
+ font-size: 14px;
+ color: #666;
+}
+
+.doctor-clinic, .doctor-location, .doctor-languages {
+ display: flex;
+ align-items: center;
+ gap: 5px;
+ font-size: 14px;
+ color: #666;
+ margin-top: 2px;
+}
+
+.appointment-section {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: flex-end;
+ flex: 1;
+}
+
+.doctor-fees {
+ font-size: 18px;
+ font-weight: 500;
+ color: #333;
+ margin-bottom: 10px;
+}
+
+.consult-modes {
+ display: flex;
+ gap: 10px;
+ margin-bottom: 15px;
+}
+
+.consult-badge {
+ padding: 4px 10px;
+ border-radius: 12px;
+ font-size: 12px;
+ font-weight: 500;
+}
+
+.consult-badge.clinic {
+ background-color: #e8f4ff;
+ color: #1e6ab3;
+}
+
+.consult-badge.video {
+ background-color: #e3fcef;
+ color: #0a9e6a;
+}
