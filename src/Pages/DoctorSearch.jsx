@@ -28,17 +28,18 @@ function DoctorSearch() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(API)
-      .then((response) => response.json())
-      .then((json) => {
-        setDoctorsData(json);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-        setLoading(false);
-      });
-  }, []);
+   fetch(API)
+     .then((response) => response.json())
+     .then((json) => {
+       setDoctorsData(json);
+       setFilteredDoctors(json); // <-- This is what you're missing!
+       setLoading(false);
+     })
+     .catch((error) => {
+       console.error('Error fetching data:', error);
+       setLoading(false);
+     });
+ }, []);
   
 
  const allSpecialities = [...new Set(doctorsData.flatMap(doctor => 
@@ -187,9 +188,10 @@ function DoctorSearch() {
     setSearchQuery('');
     setConsultMode('');
     setSelectedSpecialities([]);
-    setSortBy('');
+    setSortBy(''); 
     navigate(location.pathname);
   };
+
   
   if (loading) return <p>Loading doctors...</p>;
 
